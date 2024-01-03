@@ -1,4 +1,5 @@
 import axios from 'axios';
+require('dotenv').config();
 
 const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary';
 
@@ -11,7 +12,7 @@ const options = {
         tr_longitude: '109.149359',
       },
       headers: {
-        'X-RapidAPI-Key': '54518c8466msh313123d400e6a55p1c0653jsn46b7c0dd7544',
+        'X-RapidAPI-Key': process.env.API_KEY,
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
       }
     };
